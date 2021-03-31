@@ -1,3 +1,4 @@
+import { api } from '../../services/api'
 import Modal from 'react-modal'
 import incomeImg from '../../assets/income.svg'
 import outcomeImg from '../../assets/outcome.svg'
@@ -20,12 +21,14 @@ export function NewTransactionsModal({isOpen,onRequestClose}:NewTransactionsModa
   function handleCreateNewTransaction(event: FormEvent) {
     event.preventDefault()
 
-    console.log({
+    const data = {
       title,
       category,
       value,
       type
-    })
+    }
+
+    api.post('/transactions', data)
   }
 
   return (
