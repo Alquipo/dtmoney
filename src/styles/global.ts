@@ -75,7 +75,7 @@ export const GlobalStyle = createGlobalStyle`
     padding: 3rem;
     position: relative;
     border-radius: 0.24rem;
-
+    outline: none;
   }
 
   .react-modal-close {
@@ -84,6 +84,7 @@ export const GlobalStyle = createGlobalStyle`
     top: 1.5rem;
     border: 0;
     background: transparent;
+    outline: none;
 
     transition: filter 0.2s;
 
